@@ -16,6 +16,17 @@ import java.util.Arrays;
     여기서 i와 j는 0번이아닌 1번인덱스부터 시작한다.
 
  */
+
+// 일단 머릿속에서 나온 해결 순서
+// commands 의 갯수만큼 반복
+//        여기서 commands의 index는 0부터가아닌 1부터 시작한다.
+//
+//        commands{첫번째로 끊을위치 A,마지막끊을위치 B,정렬 후 몇번째의 수를 뽑을 수의 인덱스 C}
+//        1.일단 A와 B 사이 자르기
+//        2.오름차순정렬
+//        3.C 뽑아서 answer 배열에 넣기
+//
+
 public class Test1 {
     public static void main(String[] args){
         Test1 t = new Test1();
