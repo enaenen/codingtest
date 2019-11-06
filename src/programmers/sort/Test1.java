@@ -6,6 +6,14 @@ import java.util.Arrays;
 /*
     작성자 : 채우주
     작성일자 : 2019-11-06
+    문제 : K번째 수
+    array 가 주어지고 commands[[i,j,k],[i,j,k],[i,j,k]...n개] 가 주어진다.
+    i는 array에서 첫번째로 자를 인덱스
+    j는 array의 마지막번째 인덱스
+
+    i,j로 자른 것으로 배열을 만든 후 오름차순으로 정렬하여
+    k번째 숫자들을 배열로 만들어 리턴한다.
+    여기서 i와 j는 0번이아닌 1번인덱스부터 시작한다.
 
  */
 public class Test1 {
@@ -36,7 +44,8 @@ public class Test1 {
 //            if(commands[i][0]==commands[i][1]){
 //                answer[i]=array[commands[i][0]-1];
 //                continue;
-//            }
+//            } 처음에 copyOfRange의 인덱스 계산을 잘못해서 이부분을 넣게 되었지만 사실 필요가 없었다..
+
             //Arrays의 copyOfRange 는 (원본배열,포함되는 시작인덱스,포함이되지않는 마지막인덱스)
             // commands 에서 주어지는 인덱스가 0에서 시작하는 인덱스가 아니므로 주의해야한다.
 
