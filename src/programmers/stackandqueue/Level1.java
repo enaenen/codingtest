@@ -32,7 +32,6 @@ public class Level1 {
             queue.add(count);
             count=0;
         }
-
-        return answer;
+        return null;
     }
 }
