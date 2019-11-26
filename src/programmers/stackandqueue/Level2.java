@@ -7,40 +7,30 @@ public class Level2 {
         int[] priorities = {2,1,3,2}, priorities2 = {1,1,9,1,1};
         int location=2, location2=0;
 
-        solution(priorities,location);
+        System.out.println(solution(priorities,location));
     }
     public static int solution(int[] priorities, int location) {
-        /*
-        Queue<Integer> list = new LinkedList<Integer>();
-        int[] arr  = priorities.clone();
-        for(int i=0;i<priorities.length;i++) {
-            list.add(priorities[i]);
+        PriorityQueue<Integer> queue = new PriorityQueue<Integer>(Collections.reverseOrder());
+        for(int num : priorities){
+            queue.add(num);//우선순위 큐에 내림차순으로 정렬
         }
-        Integer[] integerArr = Arrays.stream( arr ).boxed().toArray( Integer[]::new );
-        Arrays.sort(integerArr, Comparator.reverseOrder());
-        int count=0;
-        int value;
-        int target = priorities[location];
-        //int[] saving=new int[priorities.length];
-        while(true){
-            value=list.poll();
-            if(value==integerArr[count]){
-                count++;
-                if(value==target)
-                    return count;
-            }
-            else{
-                list.add(value);
+        //큐에는 우선순위대로 들어가있고
+        //priorities 에는 원본 데이터
+        //큐의 제일 먼저 나올 엘리먼트가 priorities 배열에서 몇번째에있던 것인지 확인->i값
+        //IF priorities 배열과 큐에서 나올 엘리먼트가 동일하다면
+        //그 엘리먼트의 priorities에서의 인덱스 값 확인
+        int answer=1;
+        for(int i=0;i<priorities.length;i++){
+            if(queue.peek()==priorities[i]){
+                if(priorities[i]==queue.peek()){
+                    if(i==location) {
+                        return answer;
+                    }
+                    queue.poll();
+                    answer++;
+                }
             }
         }
-    }
-         */
-        PriorityQueue<Integer> list = new PriorityQueue<Integer>(Collections.reverseOrder());
-        for(int a : priorities){
-            list.add(a);
-            System.out.println(list);
-        }
-
-        return  1;
+        return answer;
     }
 }
