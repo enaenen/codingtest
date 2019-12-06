@@ -37,8 +37,8 @@ public class Printer_1 {
                     list.addLast(paper);
                     break;
                 }
-                if(i==list.size()-1){
-                    if(paper.index==location) {
+                if(i==list.size()-1){//위에서 priority 순으로 정리를 마치게 하기위해 list.size()-1 만큼이 될때까지 대기
+                    if(paper.index==location) {//현재 뽑기직전 대기열에 넣은 index 와 location 비교
                         return answer;
                     }
                     answer++;
@@ -46,7 +46,6 @@ public class Printer_1 {
                 }
             }
         }
-
         return answer;
     }
 }
