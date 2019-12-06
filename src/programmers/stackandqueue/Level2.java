@@ -28,7 +28,7 @@ public class Level2 {
         while(list.size()>1){
             first = list.getFirst();
             for(int i=1;i<list.size();i++){
-                if(first.priority<list.get(i).priority){
+                if(first.priority<list.get(i).priority){//
                     list.addLast(first);
                     list.removeFirst();
                     break;
