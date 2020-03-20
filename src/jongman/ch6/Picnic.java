@@ -1,3 +1,24 @@
+/*
+https://algospot.com/judge/problem/read/PICNIC
+
+입력
+
+3
+2 1
+0 1
+4 6
+0 1 1 2 2 3 3 0 0 2 1 3
+6 10
+0 1 0 2 1 2 1 3 1 4 2 3 2 4 3 4 3 5 4 5
+
+
+출력
+1
+3
+4
+
+ */
+
 package jongman.ch6;
 
 import java.util.Scanner;
