@@ -27,7 +27,7 @@ https://algospot.com/judge/problem/read/BOARDCOVER
 2
 1514
  */
-package jongman.ch6;
+package space.jongman.ch6;
 
 import java.util.Scanner;
 

@@ -2,7 +2,7 @@
 //작성일자 : 2019-11-
 //완주하지 못한 선수 문제
 //
-package programmers.hashmap;
+package space.programmers.hashmap;
 
 import java.util.HashMap;
 import java.util.Map;

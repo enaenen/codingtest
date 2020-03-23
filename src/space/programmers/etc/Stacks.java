@@ -1,4 +1,4 @@
-package programmers.etc;
+package space.programmers.etc;
 
 import java.util.Stack;
 

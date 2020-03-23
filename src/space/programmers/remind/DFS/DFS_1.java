@@ -1,4 +1,4 @@
-package programmers.remind.DFS;
+package space.programmers.remind.DFS;
 
 public class DFS_1 {
     public static void main(String[] args){

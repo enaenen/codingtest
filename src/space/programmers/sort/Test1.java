@@ -1,6 +1,5 @@
-package programmers.sort;
+package space.programmers.sort;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /*

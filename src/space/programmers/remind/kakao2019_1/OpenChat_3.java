@@ -1,8 +1,6 @@
-package programmers.remind.kakao2019_1;
+package space.programmers.remind.kakao2019_1;
 
 import java.util.HashMap;
-
-import static programmers.remind.kakao2019_1.Openchat.solution;
 
 public class OpenChat_3 {
         public static void main(String[] args) {

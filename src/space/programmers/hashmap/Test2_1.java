@@ -2,7 +2,7 @@
 //작성일자 : 2019-11-06
 //전화번호 목록 문제
 //
-package programmers.hashmap;
+package space.programmers.hashmap;
 
 import java.util.Arrays;
 

@@ -2,7 +2,7 @@
 작성자 : 채우주
 복습중..
  */
-package programmers.remind.hashmap;
+package space.programmers.remind.hashmap;
 
 import java.util.HashMap;
 import java.util.Map;

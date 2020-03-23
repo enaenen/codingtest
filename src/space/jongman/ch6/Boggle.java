@@ -1,4 +1,4 @@
-//package jongman.ch6;
+//package space.jongman.ch6;
 //
 //import java.io.*;
 //import java.nio.charset.Charset;

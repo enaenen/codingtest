@@ -1,4 +1,4 @@
-package programmers.remind.stackandqueue;
+package space.programmers.remind.stackandqueue;
 
 public class Tower {
     public static void main(String[] args){

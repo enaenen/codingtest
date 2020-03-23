@@ -1,4 +1,4 @@
-package programmers.remind.sort;
+package space.programmers.remind.sort;
 
 import java.util.Arrays;
 

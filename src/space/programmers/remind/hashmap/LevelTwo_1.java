@@ -1,4 +1,4 @@
-package programmers.remind.hashmap;
+package space.programmers.remind.hashmap;
 
 public class LevelTwo_1 {
     public static void main(String[] args){

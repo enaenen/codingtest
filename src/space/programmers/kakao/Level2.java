@@ -1,4 +1,4 @@
-package programmers.kakao;
+package space.programmers.kakao;
 
 import java.util.*;
 

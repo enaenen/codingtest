@@ -1,6 +1,5 @@
-package programmers.stackandqueue;
+package space.programmers.stackandqueue;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 

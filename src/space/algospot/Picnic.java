@@ -1,4 +1,4 @@
-package algospot;
+package space.algospot;
 
 import java.util.Scanner;
 //입력 TC

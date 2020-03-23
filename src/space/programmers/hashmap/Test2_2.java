@@ -1,4 +1,4 @@
-package programmers.hashmap;
+package space.programmers.hashmap;
 
 /*
     작성자 : 채우주

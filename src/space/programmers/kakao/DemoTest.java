@@ -3,7 +3,7 @@
 2019 KAKAO BLIND RECRUITMENT
 DEMO
  */
-package programmers.kakao;
+package space.programmers.kakao;
 
 import java.util.HashMap;
 

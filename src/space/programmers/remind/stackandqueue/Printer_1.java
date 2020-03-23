@@ -1,6 +1,4 @@
-package programmers.remind.stackandqueue;
-
-import sun.awt.image.ImageWatched;
+package space.programmers.remind.stackandqueue;
 
 import java.util.LinkedList;
 

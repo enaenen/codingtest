@@ -1,8 +1,7 @@
-package programmers.remind.stackandqueue;
+package space.programmers.remind.stackandqueue;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class DevelopSpeed_1 {

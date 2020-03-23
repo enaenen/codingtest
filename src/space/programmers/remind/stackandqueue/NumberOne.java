@@ -1,4 +1,4 @@
-package programmers.remind.stackandqueue;
+package space.programmers.remind.stackandqueue;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

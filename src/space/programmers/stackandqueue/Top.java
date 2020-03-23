@@ -1,8 +1,4 @@
-package programmers.stackandqueue;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+package space.programmers.stackandqueue;
 
 public class Top {
     public static void main(String[] args){
