@@ -16,7 +16,7 @@ package space.baekjoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Bj8958 {
+public class P8958 {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
