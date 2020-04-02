@@ -23,6 +23,9 @@ n%10 : A
 (n/100)%10 : C
 A-B
 B-C 가 같으면 한수
+
+
+
  */
 public class P1065 {
     public static void main(String[] args) throws Exception{
