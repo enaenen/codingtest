@@ -1,4 +1,4 @@
-package space.baekjoon;
+package space.baekjoon.function;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

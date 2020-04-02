@@ -1,4 +1,4 @@
-package space.baekjoon;
+package space.baekjoon.function;
 
 public class P15596 {
     public static void main(String[] args){

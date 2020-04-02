@@ -7,7 +7,7 @@
 
             S의 길이는 최소1이상 최대20 이하
  */
-package space.baekjoon;
+package space.baekjoon.strings;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
