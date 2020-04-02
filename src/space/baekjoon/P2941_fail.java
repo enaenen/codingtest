@@ -25,8 +25,8 @@ public class P2941_fail {
         counter++;
         char check;
         for(int i=1;i<input.length;i++){
-            check=input[i-1];
-            counter++;
+
+            counter++;check=input[i-1];
 
             //뭔가 예외 조건을 만드는데 dz= 와 z= 구분이 안된다.
             if(input[i]=='j' && (check=='n' || check=='l')) counter --;
