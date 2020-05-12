@@ -12,15 +12,17 @@ public class P2447 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         br.close();
+        StringBuilder sb = new StringBuilder();
 
         char[][] board = new char[n][n];
         star(board, n, 0,0);
         for(int i=0;i<n;i++){
             for(int j=0;j<n;j++){
-                System.out.print(board[i][j]);
+                sb.append(board[i][j]);
             }
-            System.out.println();
+            sb.append("\n");
         }
+        System.out.print(sb);
 
     }
     private static void star(char[][] board, int n, int x, int y){
