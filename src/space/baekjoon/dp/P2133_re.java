@@ -2,7 +2,8 @@ package space.baekjoon.dp;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
+//점화식
+// n = 3(n-2) + 2(n-4) + 2(n-6) ... + 2(n==0)
 public class P2133_re {
     private static int[] memo;
     public static void main(String[] args) throws Exception{
@@ -19,8 +20,9 @@ public class P2133_re {
         if(memo[num] !=0) return memo[num];
 
         int result = 3 * memo[num-2];
-        for(int i=3;i<=num;i++){
+        for(int i=4;i<=num;i++){
             if(i%2==0){
+                //(n-4)*2 + (n-6)*2 + ... + n(0)*2
                 result +=2 * memo[num-i];
             }
         }
