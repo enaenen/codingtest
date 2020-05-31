@@ -1,10 +1,6 @@
 package space.programmers;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.Map;
 
 public class ColoringBook {
     private static int[][] map;

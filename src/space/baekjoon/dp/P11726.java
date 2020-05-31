@@ -2,7 +2,14 @@ package space.baekjoon.dp;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+/*
+2Xn 의 벽을 채우는 방법
+1일때 1가지
+2일때 2가지
 
+
+1 X 2
+ */
 public class P11726 {
     public static int[] dp = new int[1001];
 
