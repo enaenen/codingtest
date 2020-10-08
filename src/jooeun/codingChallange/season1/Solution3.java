@@ -1,4 +1,4 @@
-package jooeun.codingChallange;
+package jooeun.codingChallange.season1;
 
 import java.util.*;
 
