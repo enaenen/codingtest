@@ -1,37 +1,36 @@
 package jooeun.codingChallange.season2;
 
-import java.util.ArrayList;
-
 public class Solution1 {
 
     public static void main(String[] args){
 
-        int n = 45;
+        int n = 125;
         int answer = solution(n);
 
-//        System.out.println(answer);
+        System.out.println(answer);
 
     }
 
-    static public int solution(int n){
+    static public int solution(int n) {
 
         int answer = 0;
+        int idx = 0;
         int target = n;
-        int temp = 0;
+        int[] arr = new int[1000];
 
-        ArrayList<Integer> remainder = new ArrayList<Integer>();
+        while(target > 0){
 
-        while(temp != 1){
-
-            temp = target/3;
-            remainder.add(target%3);
-            target = temp;
+            arr[idx++] = target % 3 ;
+            target /= 3;
 
         }
 
-        System.out.println(remainder);
+        int cnt = --idx;
+
+        for(int i = 0; i <= cnt ; i++){
+            answer += Math.pow(3, idx--) * arr[i];
+        }
 
         return answer;
     }
-
 }
