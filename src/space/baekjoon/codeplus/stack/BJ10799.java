@@ -24,7 +24,6 @@ public class BJ10799 {
                     answer++;//하나 바로전에 여는게 아닐때는 레이저가 아닌 막대기이다.
                     // 레이저가 끝난뒤에 막대기는 레이저 뒤에있는 막대기 조각이 하나가 있으므로 ++
                 }
-
             }
         }
         bw.write(String.valueOf(answer));
