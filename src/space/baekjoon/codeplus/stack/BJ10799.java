@@ -18,10 +18,11 @@ public class BJ10799 {
             }
             else if(charArray[i]==')'){
                 stack.pop();
-                if(charArray[i-1]=='('){
-                    answer+=stack.size();
+                if(charArray[i-1]=='('){//하나 바로전일때는 레이저
+                    answer+=stack.size();//레이저일때는 막대기 개수만큼 조각이 생기기 때문에 + 조각개수
                 }else{
-                    answer++;
+                    answer++;//하나 바로전에 여는게 아닐때는 레이저가 아닌 막대기이다.
+                    // 레이저가 끝난뒤에 막대기는 레이저 뒤에있는 막대기 조각이 하나가 있으므로 ++
                 }
 
             }
