@@ -15,6 +15,7 @@ public class BJ1929 {
         int primeCounter=0;
         boolean[] check = new boolean[b+1];
         for(int i=a; i<=b; i++){
+            //2일때 출력안됨 + 출력초과
             if(i<2 || i%2==0 ) continue;
             if(check[i]==false) primeNumbers[primeCounter++]=i;
             for(int j=i*2;j<=b;j+=i){
