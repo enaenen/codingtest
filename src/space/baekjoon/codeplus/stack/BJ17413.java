@@ -11,38 +11,34 @@ public class BJ17413 {
         String inputString = br.readLine();
         Stack<Character> reverseStack = new Stack<Character>();
         boolean isInnerTag = false;
-
         char[] charArray = inputString.toCharArray();
-        for (char c : charArray) {
-            if (!isInnerTag && c == ' ') {
+        for (char ch : charArray) {
+            if (ch == '<') {
+                isInnerTag = true;
                 while (!reverseStack.empty()) {
-                    sb.append(reverseStack.pop());
+                    bw.write(reverseStack.pop());
                 }
-                sb.append(c);
-                continue;
-            }
-
-            if (isInnerTag) {//태그안에있을경우 그대로 출력
-                if (c == '>') isInnerTag = false;
-                sb.append(c);
-            } else {//태그안이 아닐경우
-                if (c == '<') {//태그가 시작될경우
-                    isInnerTag = true;
+                bw.write(ch);
+            } else if (ch == '>') {
+                isInnerTag = false;
+                bw.write(ch);
+            } else if (isInnerTag) {
+                bw.write(ch);
+            } else {
+                if (ch == ' ') {
                     while (!reverseStack.empty()) {
-                        sb.append(reverseStack.pop());
+                        bw.write(reverseStack.pop());
                     }
-                    sb.append(c);
+                    bw.write(ch);
                 } else {
-                    reverseStack.push(c);
-                    if (c == charArray[charArray.length - 1]) {
-                        while (!reverseStack.empty()) {
-                            sb.append(reverseStack.pop());
-                        }
-                    }
+                    reverseStack.push(ch);
                 }
             }
         }
-        bw.write(sb.toString());
+        while (!reverseStack.empty()) {
+            bw.write(reverseStack.pop());
+        }
+        bw.newLine();
         bw.flush();
         bw.close();
     }
