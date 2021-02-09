@@ -1,4 +1,4 @@
-package jooeun.Naver_2020_2;
+package jooeun.codingtest.Naver_2020_2;
 
 public class Solution1 {
 
