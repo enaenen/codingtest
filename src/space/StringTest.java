@@ -1,6 +1,8 @@
 package space;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.TimeZone;
 
 public class StringTest {
@@ -13,7 +15,14 @@ public class StringTest {
         TimeZone.setDefault(TimeZone.getTimeZone("Asia/Seoul"));
         TimeZone.setDefault(TimeZone.getTimeZone("Asia/Tokyo"));
         System.out.println(LocalDateTime.now());
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
 
+
+        System.out.println(sdf.format(date.getTime()));
 
     }
 }
