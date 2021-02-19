@@ -1,4 +1,4 @@
-package jooeun;
+package jooeun.ex;
 
 import java.util.Arrays;
 import java.util.Scanner;

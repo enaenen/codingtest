@@ -1,4 +1,4 @@
-package jooeun;
+package jooeun.ex;
 
 import com.sun.media.jfxmediaimpl.HostUtils;
 
