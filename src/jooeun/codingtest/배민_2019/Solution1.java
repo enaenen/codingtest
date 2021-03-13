@@ -1,4 +1,4 @@
-package jooeun.codingtest.배민;
+package jooeun.codingtest.배민_2019;
 
 public class Solution1 {
 
