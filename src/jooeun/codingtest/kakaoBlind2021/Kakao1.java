@@ -1,4 +1,4 @@
-package jooeun.kakaoBlind2021;
+package jooeun.codingtest.kakaoBlind2021;
 
 import java.util.ArrayList;
 

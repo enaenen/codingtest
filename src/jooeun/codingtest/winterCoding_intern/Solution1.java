@@ -1,4 +1,4 @@
-package jooeun.winterCoding_intern;
+package jooeun.codingtest.winterCoding_intern;
 
 public class Solution1 {
 
