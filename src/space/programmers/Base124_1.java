@@ -13,16 +13,16 @@ public class Base124_1 {
         System.out.println(solution(9));
         System.out.println(solution(10));
     }
+
     public static String solution(int n) {
         String answer = "";
         int cn = n;
-        while(cn > 0){
-            if (cn %3 ==0) {
-                answer = "4"+answer;
+        while (cn > 0) {
+            if (cn % 3 == 0) {
+                answer = "4" + answer;
                 cn--;
-            }
-            else if(cn %3 ==1)
-                answer = "1"+answer;
+            } else if (cn % 3 == 1)
+                answer = "1" + answer;
             else
                 answer = "2" + answer;
             cn /= 3;
