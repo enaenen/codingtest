@@ -1,12 +1,10 @@
 package space.programmers;
 
-import sun.java2d.pipe.SpanShapeRenderer;
 
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class Year2016 {
     public static void main(String[] args) throws ParseException {
@@ -14,17 +12,8 @@ public class Year2016 {
         System.out.println(solution);
     }
     public static String solution(int a, int b) throws ParseException {
-        String answer = "";
-        String md;
-        if(a<10) {
-            md="0"+a;
-        }else{
-//            md=a+b;
-        }
-        String inputDate="2016"+"0"+a+b;
-        DateFormat df = new SimpleDateFormat("yyyyMMdd");
-        Date date = df.parse(inputDate);
-
+        LocalDate date = LocalDate.of(2016,a,b);
+        String answer = date.format(DateTimeFormatter.ofPattern("E").withLocale(Locale.ENGLISH));
         return answer.toUpperCase();
     }
 }
