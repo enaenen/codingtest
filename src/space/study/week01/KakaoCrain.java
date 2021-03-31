@@ -1,4 +1,4 @@
-package space.study.programmers;
+package space.study.week01;
 
 import java.util.Stack;
 
