@@ -28,9 +28,8 @@ public class KakaoCrain {
                     basket.pop();
                     answer++;
                 }
-                else {
+                else
                     basket.push(board[j][x]);
-                }
                 board[j][x]=0;
                 break;
             }
