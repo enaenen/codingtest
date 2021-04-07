@@ -14,8 +14,8 @@ public class ReverseBase3 {
     }
 
     public static int solution(int n) {
-        String base3 = ""+toBase3(n);
-        System.out.println("base3 = "+ base3);
+        String base3 = "" + toBase3(n);
+        System.out.println("base3 = " + base3);
         int base10 = (int) toBase10(base3);
         return base10;
     }
@@ -40,4 +40,18 @@ public class ReverseBase3 {
         }
         return base10;
     }
+
+    public int solution2(int n) {
+        String a = "";
+
+        while(n > 0){
+            a = (n % 3) + a;
+            n /= 3;
+        }
+        a = new StringBuilder(a).reverse().toString();
+
+
+        return Integer.parseInt(a,3);
+    }
+
 }
