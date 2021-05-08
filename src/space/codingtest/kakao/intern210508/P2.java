@@ -27,10 +27,15 @@ public class P2 {
 
         for(int i=0;i<map.length;i++){
             for(int j=0;j<map[0].length;j++){
-
+                if(map[i][j] == 'P'){
+                }
             }
         }
         return answer;
     }
+//    public static boolean rightCheck(char[][] map, int x, int y){
+//        boolean check = true;
+//
+//    }
 
 }
