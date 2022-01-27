@@ -48,32 +48,22 @@ public class AddTwoNumbers {
         return size;
     }
 
-    public int nodeValueToString(ListNode node) {
+    public long nodeValueToString(ListNode node) {
         StringBuffer sb = new StringBuffer();
         while (node != null) {
             sb.append("" + node.val);
             node = node.next;
         }
-        return Integer.parseInt(sb.reverse().toString());
+        return Long.parseLong(sb.reverse().toString());
     }
-
-    //    public int flipNumber(int num){
-//        int result = 0;
-//        while (num != 0) {
-//            result = result * 10 + num % 10;
-//            num /= 10;
-//        }
-//        return num;
-//    }
-    public ListNode resultOfSum(int num) {
-        ListNode head = new ListNode();
-        ListNode temp = head;
-        while (num != 0) {
-            temp.next = new ListNode(num % 10);
+    public int countDigit(long num){
+        int count;
+        count = 0;
+        while (num > 0) {
+            count++;
             num /= 10;
-            temp = temp.next;
         }
-        return head.next;
+        return count;
     }
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -83,27 +73,42 @@ public class AddTwoNumbers {
 
         if (l1Size == 1 && l2Size == 1 && l1.val == 0 && l2.val == 0)
             result.val = 0;
-        int firstNum = nodeValueToString(l1);
-        int secondNum = nodeValueToString(l2);
-        int sumOfTwo = firstNum + secondNum;
+        long firstNum = nodeValueToString(l1);
+        long secondNum = nodeValueToString(l2);
+        long sumOfTwo = firstNum + secondNum;
+        int digitCount = countDigit(sumOfTwo);
+        StringBuilder sb = new StringBuilder();
+        while (0 <= --digitCount){
+            sb.append(Long.toString(sumOfTwo).charAt(digitCount));
+        }
 
-        result = resultOfSum(sumOfTwo);
         return result;
     }
 
     public static void main(String[] args) {
         AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
-        ListNode l1 = new ListNode(2);
-        ListNode l2 = new ListNode(4);
-        ListNode l3 = new ListNode(3);
-        l1.next = l2;
-        l2.next = l3;
+        ListNode l1 = new ListNode(9);
 
-        ListNode ll1 = new ListNode(5);
-        ListNode ll2 = new ListNode(6);
-        ListNode ll3 = new ListNode(4);
+
+        ListNode ll1 = new ListNode(1);
+        ListNode ll2 = new ListNode(9);
+        ListNode ll3 = new ListNode(9);
+        ListNode ll4 = new ListNode(9);
+        ListNode ll5 = new ListNode(9);
+        ListNode ll6 = new ListNode(9);
+        ListNode ll7 = new ListNode(9);
+        ListNode ll8 = new ListNode(9);
+        ListNode ll9 = new ListNode(9);
+        ListNode ll10 = new ListNode(9);
         ll1.next = ll2;
         ll2.next = ll3;
+        ll3.next = ll4;
+        ll4.next = ll5;
+        ll5.next = ll6;
+        ll6.next = ll7;
+        ll7.next = ll8;
+        ll8.next = ll9;
+        ll9.next = ll10;
 
         ListNode listNode = addTwoNumbers.addTwoNumbers(l1, ll1);
         while (listNode != null) {
