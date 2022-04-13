@@ -5,10 +5,6 @@ package space.leetcode;
  * https://leetcode.com/problems/add-two-numbers/
  */
 
-import com.sun.tools.javac.util.StringUtils;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Definition for singly-linked list.
