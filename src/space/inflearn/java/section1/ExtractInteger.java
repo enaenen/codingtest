@@ -5,9 +5,12 @@ import java.util.Scanner;
 public class ExtractInteger {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String word = sc.next().replaceAll("[^0-9]","");
+        String input = sc.next();
+        String word = input.replaceAll("[^0-9]","");
         System.out.println(Integer.parseInt(word));
-        solution(sc.next());
+
+        solution(input);
+        solution2(input);
     }
     public static void solution(String word){
         char[] chars = word.toCharArray();
@@ -17,5 +20,13 @@ public class ExtractInteger {
                 answer = answer * 10 + (c - '0');
         }
         System.out.println(answer);
+    }
+    public static void solution2 (String word){
+        String answer = "";
+        for (char c : word.toCharArray()) {
+            if (Character.isDigit(c))
+                answer += c;
+        }
+        System.out.println(Integer.parseInt(answer));
     }
 }
