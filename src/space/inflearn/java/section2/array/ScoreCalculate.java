@@ -37,6 +37,7 @@ public class ScoreCalculate {
         for (int i = 0; i < n; i++){
             scores[i] = sc.nextInt();
         }
+        solution(scores);
         int totalScore = 0;
         int counter = 0;
         for (int score : scores) {
@@ -50,5 +51,20 @@ public class ScoreCalculate {
             }
         }
         System.out.println(totalScore);
+    }
+    public static void solution(int[] scores)
+    {
+        int answer = 0;
+        int cnt = 0;
+        for (int i = 0; i < scores.length; i++)
+        {
+            if(scores[i] == 1)
+            {
+                cnt++;
+                answer += cnt;
+            }
+            else cnt = 0;
+        }
+        System.out.println("==================");
     }
 }
