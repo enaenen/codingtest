@@ -6,11 +6,50 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ReverseNumAndCheckPrime {
+    public static boolean isPrime2(int n)
+    {
+        if (n == 1)
+            return false;
+        for (int i = 2; i < n; i++)
+        {
+            if (n % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+    public static void solution2(int n){
+        System.out.println("========solution2==========");
+
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[n];
+        for (int i = 0; i < n ; i++){
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0 ;i < n; i++)
+        {
+            int reverseNumber = 0;
+            int original = arr[i];
+            while (0 < original)
+            {
+                int tmp = original % 10;
+                reverseNumber = reverseNumber * 10 + tmp;
+                original /= 10;
+            }
+            if (isPrime2(reverseNumber))
+                System.out.print(reverseNumber + " ");
+        }
+        System.out.println();
+        System.out.println("========solution2 END==========");
+
+
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
         int[] arr = new int[n];
         solution(n);
+        solution2(n);
 
         String[] input = sc.nextLine().split(" ");
         for (int i = 0; i < n; i++){
@@ -61,6 +100,7 @@ public class ReverseNumAndCheckPrime {
         for (Integer integer : answer) {
             System.out.print(integer + " ");
         }
+        System.out.println();
         System.out.println("==========solution end ==========");
     }
 }
