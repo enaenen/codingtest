@@ -22,16 +22,30 @@ public class ReverseNumAndCheckPrime {
         for (int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
-        for (int i : arr) {
-            reversedNum = 0;
-            while (0 < i) {
-                int tmp = i % 10;
-                reversedNum = reversedNum * 10 + tmp;
-                i /= 10;
+        solution(arr);
+//        for (int i : arr) {
+//            reversedNum = 0;
+//            while (0 < i) {
+//                int tmp = i % 10;
+//                reversedNum = reversedNum * 10 + tmp;
+//                i /= 10;
+//            }
+////            System.out.println(reversedNum);
+//            if (isPrime(reversedNum))
+//                System.out.print(reversedNum + " ");
+//        }
+    }
+    public static void solution(int[] nums){
+        for (int num : nums) {
+            int reverse = 0;
+            int tmp = 0;
+            while (0 < num){
+                reverse =  reverse * 10 + num % 10;
+                num /= 10;
             }
-//            System.out.println(reversedNum);
-            if (isPrime(reversedNum))
-                System.out.print(reversedNum + " ");
+            if (isPrime(reverse))
+                System.out.print(reverse + " ");
         }
+
     }
 }

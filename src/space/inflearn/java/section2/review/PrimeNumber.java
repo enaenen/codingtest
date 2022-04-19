@@ -1,7 +1,7 @@
 package space.inflearn.java.section2.review;
 
 import java.util.Scanner;
-//0419
+//0418
 //review needed
 public class PrimeNumber {
     public static void main(String[] args) {
@@ -18,5 +18,22 @@ public class PrimeNumber {
             }
         }
         System.out.println(primeNumber);
+        solution(n);
+    }
+//    0419
+    public static void solution(int n)
+    {
+        int[] check = new int[n];
+        int primeCount = 0;
+        for (int i = 2; i < n; i++)
+        {
+            if (check[i] == 0)
+            {
+                primeCount++;
+                for (int j = i; j < n; j = j + i)
+                    check[j] = 1;
+            }
+        }
+        System.out.println(primeCount);
     }
 }
