@@ -22,6 +22,7 @@ public class P2 {
     }
 
     public static int solution(int[] queue1, int[] queue2) {
+        //limit 에 대한 고려 필요 *2 를 안해서 1번에서 계속 튕겻음
         long limit = queue1.length + queue2.length;
         Queue<Integer> q1 = new LinkedList<>();
         Queue<Integer> q2 = new LinkedList<>();
