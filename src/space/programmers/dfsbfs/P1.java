@@ -1,4 +1,4 @@
-package space.programmers.dfs;
+package space.programmers.dfsbfs;
 
 public class P1 {
     public static void main(String[] args) {
