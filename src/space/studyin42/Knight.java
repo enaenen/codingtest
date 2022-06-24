@@ -2,7 +2,7 @@ package space.studyin42;
 
 import java.util.Scanner;
 
-public class ArabianKnight {
+public class Knight {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         char[] inputs = sc.next().toCharArray();
