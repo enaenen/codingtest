@@ -9,6 +9,9 @@ public class BinarySearch {
         System.out.println(solution( arr,10));
     }
 
+    // Ologn
+    // 공간복잡도 : O(1)
+
     public static int solution(int[] arr, int target) {
         int low = 0;
         int high = arr.length - 1;
