@@ -30,15 +30,14 @@ public class SortTimeCheck {
         int max = 100;
         return (int) ((Math.random() * (max - min)) + min);
     }
-    public static void main(String[] args) throws IOException {
-
+    public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] inputs = br.readLine().split(" ");
-        int[] ints = Arrays.stream(inputs).mapToInt(Integer::parseInt).toArray();
-        Arrays.sort(ints);
-        for (Integer a : ints){
-            System.out.print(a + " ");
+        Arrays.sort(inputs);
+        for (String a : inputs){
+            System.out.print(Integer.parseInt(a) + " ");
         }
+    }
 /*
         int[] arr = new int[1000000]; //= new int[] {3, 2,1};
         String[] strings = new String[1000000]; //= new String[] {"3","2","1"};
@@ -59,4 +58,3 @@ public class SortTimeCheck {
  }
 
 
-}
