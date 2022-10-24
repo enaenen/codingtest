@@ -30,7 +30,7 @@ public class P5397_WIP {
                         list.remove(listIter.previousIndex());
                         listIter.previous();
                     }
-                    } else {
+                } else {
                     listIter.add(input.charAt(j));
                 }
             }
