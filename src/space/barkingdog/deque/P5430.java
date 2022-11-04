@@ -1,10 +1,7 @@
 package space.barkingdog.deque;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.*;
 
 public class P5430 {
     public static void main(String[] args) throws IOException {
@@ -15,36 +12,51 @@ public class P5430 {
             StringBuilder sb = new StringBuilder();
             String cmd = br.readLine();
             int n = Integer.parseInt(br.readLine());
-            String[] nums = br.readLine().replace("[", "").replace("]", "").split(",");
-            LinkedList<String> list = new LinkedList<String>();
-            boolean isError = false;
-            for (String num : nums)
-                list.add(num);
-
-            for (char i : cmd.toCharArray()) {
-                if (i == 'R') {
-                    Collections.reverse(list);
-                } else if (i == 'D') {
-                    //배열이 0이고, 삭제를 연산한 경우
-                    if (list.isEmpty()) {
-                        sb.append("error\n");
+            if (n < 1) {
+                bw.write("error\n");
+                bw.flush();
+            } else {
+                String[] nums = br.readLine().replace("[", "").replace("]", "").split(",");
+                Deque<String> deq = new LinkedList<String>();
+                for (String num : nums) {
+                    if (num.length() == 0)
                         break;
-                    }
-                    list.removeFirst();
+                    deq.add(num);
                 }
-            }
+                boolean reverse = false;
+                boolean isError = false;
 
-            if (!list.isEmpty()) {
-                sb.append("[");
-                for (String str : list) {
-                    sb.append(str);
-                    sb.append(",");
+                for (char i : cmd.toCharArray()) {
+                    if (i == 'R') {
+                        reverse = !reverse;
+                    } else if (i == 'D') {
+                        //배열이 0이고, 삭제를 연산한 경우
+                        if (deq.isEmpty()) {
+                            bw.write("error\n");
+                            isError = true;
+                            break;
+                        }
+                        if (reverse)
+                            deq.removeLast();
+                        else
+                            deq.removeFirst();
+                    }
                 }
-                sb.deleteCharAt(sb.length() - 1);
-                sb.append("]");
-                sb.append("\n");
+                if (!isError) {
+                    sb.append("[");
+                    while (!deq.isEmpty()) {
+                        if (reverse)
+                            sb.append(deq.removeLast());
+                        else
+                            sb.append(deq.remove());
+                        sb.append(",");
+                    }
+                    sb.deleteCharAt(sb.length() - 1);
+                    sb.append("]\n");
+                }
+                bw.write(sb.toString());
+                bw.flush();
             }
-            System.out.println(sb.toString());
         }
     }
 }
