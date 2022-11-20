@@ -15,7 +15,7 @@ public class P4949 {
         String closes = ")}]";
         while (!line.equals(".")) {
             boolean isError = false;
-            for (int i = 0; i < line.length(); i++) {
+            for (int i = 0; i < line.length(); i++){
                 if (line.charAt(i) == '(' || line.charAt(i) == '{' || line.charAt(i) == '[')
                     braceletStack.push(line.charAt(i));
                 //닫는 괄호일때
