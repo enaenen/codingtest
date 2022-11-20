@@ -49,7 +49,7 @@ public class P10026_1 {
                         int nextY = p.y + offsetY[k];
                         if (nextX < 0 || nextY < 0 || n <= nextX || n <= nextY)
                             continue;
-                        if (visited[nextY][nextX] || map[nextY][nextX] != prev)
+                        if (visited[nextY][nextX])
                             continue;
                         visited[nextY][nextX] = true;
                         que.offer(new Pair(nextY, nextX));
@@ -89,7 +89,7 @@ public class P10026_1 {
                         int nextY = p.y + offsetY[k];
                         if (nextX < 0 || nextY < 0 || n <= nextX || n <= nextY)
                             continue;
-                        if (visitedForWeakColor[nextY][nextX] || map[nextY][nextX] != prev)
+                        if (visitedForWeakColor[nextY][nextX])
                             continue;
                         visitedForWeakColor[nextY][nextX] = true;
                         que.offer(new Pair(nextY, nextX));
