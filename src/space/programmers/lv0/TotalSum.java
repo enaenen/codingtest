@@ -1,6 +1,5 @@
 package space.programmers.lv0;
 
-import com.sun.media.sound.SoftLanczosResampler;
 
 import java.util.Arrays;
 
