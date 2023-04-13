@@ -22,7 +22,7 @@ public class KakaoIntern2020 {
                 map.put(survey[1], map.get(survey[1] + choices[i] % 4));
         }
 
-        return answer;
+        return answer.toString();
     }
 
     public static void main(String[] args) {
