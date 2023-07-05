@@ -40,7 +40,8 @@ public class PreOrder606 {
         answer.append("(");
         if (node != null) {
             answer.append(node.val);
-            if (node.left == null && node.right != null)
+            if (node.left == null && node.right != null) // this would be key
+
                 answer.append("()");
             if (node.left != null)
                 preOrder(node.left, answer);
