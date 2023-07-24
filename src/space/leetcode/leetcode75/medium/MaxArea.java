@@ -1,4 +1,4 @@
-package space.leetcode.leetcode75;
+package space.leetcode.leetcode75.medium;
 
 public class MaxArea {
     public static void main(String[] args) {
