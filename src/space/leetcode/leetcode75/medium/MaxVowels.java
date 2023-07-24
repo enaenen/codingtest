@@ -1,4 +1,4 @@
-package space.leetcode.leetcode75;
+package space.leetcode.leetcode75.medium;
 
 import java.util.Deque;
 import java.util.LinkedList;
