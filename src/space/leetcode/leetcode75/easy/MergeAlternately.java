@@ -1,4 +1,4 @@
-package space.leetcode.leetcode75;
+package space.leetcode.leetcode75.easy;
 
 public class MergeAlternately {
     public static String mergeAlternately(String word1, String word2) {
