@@ -1,4 +1,4 @@
-package space.leetcode.leetcode75;
+package space.leetcode.leetcode75.medium;
 //https://leetcode.com/problems/maximum-average-subarray-i/submissions/?envType=study-plan-v2&envId=leetcode-75
 public class FindMaxAverage {
     public static void main(String[] args) {
